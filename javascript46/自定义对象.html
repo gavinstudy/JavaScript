@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			/*创建对象   产生大量的重复代码*/  
+			var student=new Object();// 创建一个对象;
+			 student.name='容儿';
+			 student.age=22;
+			 student.eat=function(){
+			 	alert(this.name+"吃东东");
+			 }
+			//创建一个类似的对象,就产生大量重复代码
+			var student2=new Object();// 创建一个对象;
+			 student2.name='祖儿';
+			 student2.age=23;
+			 student2.eat=function(){
+			 	alert(this.name+"吃东东");
+			 }
+			 
+			 alert(student.name)
+			 alert(student2.name)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var ul=document.createElement('ul');
+				var li=document.createElement('li');
+				var div=document.getElementById('box');
+				var text=document.createTextNode('深圳');
+				li.appendChild(text);
+				ul.appendChild(li);
+				div.appendChild(ul);
+				//document.write("<html><head></head><body>中国共产主义青年团</body></html>")
+				
+				
+				var span=document.createElement('span');
+				var h1=document.createElement('h1');
+				div.parentNode.insertBefore(span,div);
+				div.parentNode.replaceChild(h1,div);
+				
+				//
+				var box=document.getElementById('box1');
+				var obj=box.firstChild.cloneNode();  //拷贝节点
+				alert(obj.nodeName);  //objj是box1文本节点拷贝过来的;
+				alert(obj.nodeValue);
+				
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		xxxx
+		<div id="box"></div>
+		
+		<div id="box1">box1</div>
+	</body>
+</html>

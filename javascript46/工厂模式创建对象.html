@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*工厂模式  解决代码重复问题*/
+			 function Student(name,age){
+			 	var obj=new Object();
+			 	obj.name=name;
+			 	obj.age=age;
+			 	obj.eat=function(){
+			 		alert(this.name+"  吃东东");
+			 	}
+			 	return obj;
+			 }
+			 
+			 
+			 var stu1=Student('容儿',22);
+			 var stu2=Student('祖儿',23);
+			 alert(stu1.name);
+			 stu1.eat();
+			 stu2.eat();
+			 
+			 //工厂模式解决了重复实例例化的问题，但是存一个对象识别问题，无法搞清楚他们到底是哪个对象的实例.
+			 alert(typeof(stu1));  //object 类型;太泛了.
+			 alert(stu1 instanceof Object)
+			 //让stu1是Student的对象
+			 
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

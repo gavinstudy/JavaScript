@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			  .mybox{
+			  	 width:200px;
+			  	 height: 100px;
+			  	 background-color: greenyellow;
+			  	 border:1px solid red;
+			  }
+		</style>
+		<script type="text/javascript">
+			/*window.onload事件表示：加载完html文档后执行函数;*/
+			window.onload=function(){
+				/*
+				var txt=document.getElementById('username');  
+			    alert(txt);
+			    alert(txt.value);
+			    alert(txt);
+			    txt.value="小白";
+			    alert(txt.maxLength);
+			    */
+			   /*
+			   var divs=document.getElementsByTagName("div");
+			   alert(divs.length);
+			   for(i=0;i<divs.length;i++){
+			   	alert(divs[i].tagName);
+			   	alert(divs[i].innerHTML);
+			   }
+			   */
+			  
+			  /*
+			  var loves=document.getElementsByName("loves");
+			  for(i=0;i<loves.length;i++){
+			  	
+			  	   loves[i].checked=true;
+			  	   alert(loves[i].value);
+			  }
+			  */
+			 var username=document.getElementById('username').getAttribute('value');
+			 alert(username);
+			 var ids=document.getElementById('username').getAttribute('ids');
+			 alert(ids);
+			 
+			 document.getElementById("box").setAttribute("color","red"); 
+			 document.getElementById("box").removeAttribute("color");
+			 
+			 //访问样式 style 
+			 document.getElementById('box').style.color='red';
+			 
+			 //CSS元素的类
+			 document.getElementById('box').className='mybox';
+			}
+			
+		</script>
+	</head>
+	<body>
+		<input type="text" id="username" value="容儿" maxlength="10" ids="999"/>
+		<div>box1</div>
+		<div>box2</div>
+		<div>box3</div>
+		
+		<input type="checkbox" name="loves" value="net">net
+		<input type="checkbox" name="loves" value="music">music
+		<input type="checkbox" name="loves" value="sports">sports
+		<div id="box">box</div>
+	</body>
+</html>

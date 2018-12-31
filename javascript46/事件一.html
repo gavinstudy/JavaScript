@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var txt=document.getElementById('txt1');
+				txt.onblur=function(){
+					alert('xxxx');
+				}
+				
+				var city=document.getElementById('city');
+				city.onchange=function(){
+					alert('xxxx');
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="txt1" />
+		<input type="text" id="txt2" />
+		<select id="city">
+			<option value="aa">aa</option>
+			<option value="bb">bb</option>
+			<option value="cc">cc</option>
+			<option value="dd">dd</option>
+		</select>
+	</body>
+</html>

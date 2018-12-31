@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width:200px;
+				height:200px;
+				background:blue;
+				position:absolute;
+				left:0;
+				top:50px;
+				
+				
+			}
+		</style>
+		<script>
+			/*
+			setInterval(function(){
+				var div=document.getElementById('div1');
+				div.style.left=div.offsetLeft+10+'px';
+			},50);
+			*/
+			
+			window.onload=function(){
+				document.write(navigator.appCodeName + "</p>");
+				document.write(navigator.appName + "</p>");
+				document.write(screen.availHeight + "</p>");
+			    document.write(screen.height + "</p>");
+				var timer=null;
+				var div=document.getElementById('div1');
+				var btn=document.getElementById('btn');
+				btn.onclick=function(){
+					timer=setInterval(function(){
+						if(div.offsetLeft==500){
+							clearInterval(timer);
+						}
+						div.style.left=div.offsetLeft+10+'px';
+					},30);
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="开始运动" />
+		<div id="div1"></div>
+	</body>
+</html>

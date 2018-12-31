@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.auth_left{
+				width:200px;
+				height:300px;
+				font-size: 12px;
+				margin-top: 10px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var btn=document.getElementById('bt'); //获取按钮元素
+				//给按钮绑定单击事件.
+				btn.onclick=function(){
+					var auth_left=document.getElementById('auth_left');
+					var auth_right=document.getElementById('auth_right');
+					for(i=0;i<auth_left.length;i++){
+						if(auth_left.options[i].selected==true){
+							var option=document.createElement('option');  //动态创建option元素;
+							//把选中的option的值，及文本赋给option
+							option.text=auth_left.options[i].text;
+							option.value=auth_left.options[i].value;
+							//把option 添加auth_right;
+							auth_right.add(option);
+							//把左边移到右边的option移除.
+							auth_left.removeChild(auth_left.options[i]);
+							//break;
+							
+							
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<select id="auth_left" size="10" multiple="multiple" class="auth_left">
+			<option value="增加栏目">增加栏目</option>
+			<option value="查看栏目">查看栏目</option>
+			<option value="增加新闻">增加新闻</option>
+			<option value="新闻管理">新闻管理</option>
+		</select>
+		<input type="button" value=">>>>" id="bt"/>
+		<select id="auth_right" size="10" multiple="multiple" class="auth_left">
+			
+		</select>
+	</body>
+</html>

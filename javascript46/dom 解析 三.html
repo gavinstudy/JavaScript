@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			 window.onload=function(){
+			 	var div=document.getElementById('box');
+			 	/*
+			 	alert(div.nodeName);
+			 	alert(div.nodeType);
+			 	alert(div.nodeValue);
+			 	*/
+			 	/*获取div box下的所有子节点*/
+			 	/*
+			 	var alles=div.childNodes;  //div下的子节点 mydiv是一个文本节点
+			 	alert(alles.length); //1
+			 	alert(alles[0].nodeName);   //#text 
+			 	alert(alles[0].nodeType);   //3
+			 	alert(alles[0].nodeValue);  //mydiv
+			 	
+			    alert(alles[1].nodeName);   //span 
+			 	alert(alles[1].nodeType);   //1
+			 	alert(alles[1].nodeValue);  //null
+			 	
+			 	alert(alles[2].nodeName);   //
+			 	alert(alles[2].nodeType);   //
+			 	alert(alles[2].nodeValue);  //
+			 	*/
+			 	var myul=document.getElementById('myul');
+			 	var li=myul.lastChild;
+			 	alert(li.nodeName);
+			 	li.style.backgroundColor="red";
+			 	
+			 	alert(myul.ownerDocument===document); //document
+			 	alert(myul.parentNode.nodeName);  //父节点
+			 	alert(myul.previousSibling.nodeName);  //前一个兄弟节点
+			 }
+		</script>
+	</head>
+	<body>
+		<div id="box">mydiv<span>span1</span></div>
+		<span>span</span><ul id="myul"><li>aaa</li><li>bbb</li><li>ccc</li><li>ddd</li></ul>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 构造函数  解决代码重复问题，也解决了对象的识别问题*/
+			function Student(name,age){
+				this.name=name;
+				this.age=age;
+				this.eat=function(){
+					alert(this.name+" 吃东东");
+				}
+			}
+		
+			var stu1=new Student('容儿',22);
+			stu1.eat();
+			
+			var stu2=new Student('小花',23);
+			stu2.eat();
+			
+			alert(stu1 instanceof Student);   //识别对象
+			
+			
+			var arr=new Array();
+			alert(arr.constructor);  //构造器.
+			alert(stu1.constructor);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

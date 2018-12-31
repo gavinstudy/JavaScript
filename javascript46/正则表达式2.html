@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			var reg=new RegExp("is","i");
+			var str="it is a book";
+			//test exec测试方法
+			alert(reg.test(str));  //true
+			alert(reg.exec(str));  //is
+			*/
+
+			var str="asdf 22 23 sdf 99";
+			var reg2=/\d/g;
+			alert(str.search(reg2));
+			alert(str.match(reg2));
+			alert(reg2.test(str));
+
+			
+			/*
+			var str="apc xpc ppc bpc spc tpc";
+			var reg=/[apx]pc/g;
+			alert(str.match(reg));
+			*/
+			/*
+			var str='22 sdf 33 sdfs 4234 sdf';
+			alert(str.match(/\d+/g));
+			*/
+			var str="ababcdef";
+			var reg=/^ab$/;
+			alert(str.search(reg));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

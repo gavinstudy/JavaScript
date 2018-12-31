@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var txt1=document.getElementById('txt1');
+				var txt2=document.getElementById('txt2');
+				var btn=document.getElementById('btn');
+				btn.onclick=function(){
+					var reg=/<[^<>]+>/g;
+					txt2.value=txt1.value.replace(reg,'');
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<textarea id="txt1" rows="10" cols="50"></textarea>
+		<input type="button" id="btn" value="转"/>
+		<textarea id="txt2" rows="10" cols="50"></textarea>
+	</body>
+</html>
+< spap</spap>sdfsfsdfsdfasdf</p>
+<<p>>sdfsfsdfsdfasdf</p>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			 //到了1秒钟，只调用一次,
+			 var timer=window.setTimeout('fun()',1000);
+			 function fun(){
+			 	alert('xxx');
+			 }
+			 
+			
+			
+			
+			window.onload=function(){
+				var btn1=document.getElementById('btn1');
+				var btn2=document.getElementById('btn2');
+				var timer=null;
+				btn1.onclick=function(){
+					timer=setInterval(function(){
+						alert('aaa');
+					},5000);
+				}
+				btn2.onclick=function(){
+					clearInterval(timer);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn1" value="开启" />
+		<input type="button" id="btn2" value="关闭" />
+	</body>
+</html>

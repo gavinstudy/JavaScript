@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*普通函数是没有事件对象---事件源...event*/
+			 function show(x,y){
+			 	alert(arguments.length);    //arguments隐藏对象，记录函数的参数;
+			 }
+			 show(10,20);
+			 
+			 window.onload=function(){
+			 	var btn=document.getElementById('btn');
+			 	btn.onclick=function(ev){       //事件处理函数隐式传递了一个参数event事件对象;
+			 		alert(arguments.length);
+			 		alert(ev);
+			 	}
+			 	
+			 	document.onclick=function(ev){
+			 		
+			 	   //alert(ev.clientX + ',' + ev.clientY);
+		          // alert(ev.screenX + ',' + ev.screenY);
+
+			 		if(ev.button==0){
+			 			alert('左键');
+			 		}else if(ev.button==1){
+			 			alert('中间键');
+			 		}else if(ev.button==2){
+			 			alert('右键');
+			 		}
+			 		
+			 	}
+			 }
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="添加"/>
+	</body>
+</html>

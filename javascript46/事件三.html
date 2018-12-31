@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script type="text/javascript">
+			/*事件绑定*/
+			/*
+			window.onload=function(){
+				alert('容儿');
+			}
+			window.onload=function(){
+				alert('小花');
+			}
+			*/
+			window.addEventListener('load', function () {
+	          alert('张三');
+              }, false);
+
+            window.addEventListener('load', function () {
+	           alert('Mr.张三');
+              }, false);
+             window.onload=function(){
+             	var btn=document.getElementById('btn');
+             	//事件类型on+click(事件名)
+             	btn.addEventListener('click',function(){
+             		alert('点我吧!');
+             	});
+             }
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn"  value="点我吧!"/>
+	</body>
+</html>

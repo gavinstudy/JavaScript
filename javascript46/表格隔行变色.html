@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			  window.onload=function(){
+			  	 var oTb=document.getElementById('tb');
+			  	 var oldColor='';
+			  	 for(var i=0;i<oTb.tBodies[0].rows.length;i++){
+			  	 	oTb.tBodies[0].rows[i].onmouseover=function(){
+			  	 		oldColor=this.style.background;  //保存原始的行的颜色;
+			  	 		this.style.background='green';
+			  	 		
+			  	 	}
+			  	 	oTb.tBodies[0].rows[i].onmouseout=function(){
+			  	 		;
+			  	 		this.style.background=oldColor;
+			  	 		
+			  	 	}
+			  	 	if(i%2){
+			  	 		oTb.tBodies[0].rows[i].style.background='';
+			  	 		
+			  	 	}else{
+			  	 		oTb.tBodies[0].rows[i].style.background='#CCC';
+			  	 	}
+			  	 }
+			  	 
+			  }
+		</script>
+	</head>
+	<body>
+		<table id="tb" border="1" width="500">
+			<thead>
+				<td>学号</td>
+				<td>姓名</td>
+				<td>年龄</td>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1001</td>
+					<td>容儿</td>
+				    <td>22</td>
+				</tr>
+				<tr>
+					<td>1002</td>
+					<td>小花</td>
+				    <td>20</td>
+				</tr>
+				<tr>
+					<td>1003</td>
+					<td>德华</td>
+				    <td>22</td>
+				</tr>
+				<tr>
+					<td>1004</td>
+					<td>小白</td>
+				    <td>22</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		
+		
+	</body>
+</html>

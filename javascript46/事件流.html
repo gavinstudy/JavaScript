@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box=document.getElementById('box');
+				var btn=document.getElementById('btn');
+				btn.onclick=function(evt){
+					alert('btn');
+					evt.stopPropagation();  //阻止事件冒泡
+				}
+				box.onclick=function(evt){
+					alert('div');
+					evt.stopPropagation();  //阻止事件冒泡
+				}
+				document.body.onclick=function(){
+					alert('body');
+				}
+				document.onclick=function(){
+					alert('document');
+				}
+			}
+		</script>
+	</head>
+	<body>
+		 <div id="box">
+		 	<input type="button" id="btn" value="点我吧!"/>
+		 </div>
+	</body>
+</html>

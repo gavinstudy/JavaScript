@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function Student(){};
+			Student.prototype={
+				name:'容儿',
+				age:20,
+				eat:function(){
+					return this.name+" 吃东东";
+				}
+			}
+			
+			var stu1=new Student();
+			alert(stu1.name);
+			stu1.eat();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
